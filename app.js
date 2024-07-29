@@ -4,7 +4,13 @@ $(function() {
   });
   
   $('#colorButton').on("click", function(){
-    $('#colorDiv').css("backgroundColor", "yellow");
+    let color = $('#colorDiv').css("backgroundColor");
+    // console.log(color)
+    if(color === "rgb(255, 255, 0)"){
+      $('#colorDiv').css("backgroundColor", "blue");
+    }else {
+      $('#colorDiv').css("backgroundColor", "yellow");
+    }
   });
 
   $('#addClassButton').click(function(){
